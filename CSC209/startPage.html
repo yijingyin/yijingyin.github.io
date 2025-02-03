@@ -1,24 +1,81 @@
 <html>
     <style>
-        div {
-          width: 650px;
-          margin: auto;
-          background-color: #FFF4A3;
-        }
+
+        header {
+            background-color: #FFF4A3;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: black;
+          }
+
+          .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {background-color: #ddd;}
+          
+          .dropdown:hover .dropdown-content {display: block;}
+          
+          .dropdown:hover .dropbtn {background-color: #3e8e41;}
         </style>
-<meta name="Keywords" content="Homeworks, Labs">
+
 <head>
     <title> Start Page</title>
+   
 </head>
 
 <body>
-    <nav>
-        <a href="/html/">Homeworks</a> |
-        <a href="/css/">Labs</a> 
-      </nav>
-<div>
+
+
+<header>
     <h2>This Start Page includes all my Homeworks and Labs</h2>
-</div>
+</header>
+
+
+<div class="dropdown">
+    <button class="dropbtn">Homeworks</button>
+    <div class="dropdown-content">
+      <a href="#">Hw1</a>
+      <a href="#">Hw2</a>
+      <a href="#">Hw3</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Labs</button>
+    <div class="dropdown-content">
+      <a href="#">Lab1</a>
+      <a href="#">Lab2</a>
+      <a href="#">Lab3</a>
+    </div>
+  </div>
+
 
 </body>
 </html>
