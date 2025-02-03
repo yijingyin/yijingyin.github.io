@@ -10,52 +10,106 @@
             color: black;
           }
 
-          .dropbtn {
+          .navbar {
+            overflow: hidden;
             background-color: #04AA6D;
-            color: white;
-            padding: 16px;
+          }
+          
+          .navbar a {
+            float: left;
             font-size: 16px;
-            border: none;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
           }
           
           .dropdown {
-            position: relative;
-            display: inline-block;
+            float: left;
+            overflow: hidden;
+          }
+          
+          .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+          }
+          
+          .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
           }
           
           .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f1f1f1;
+            background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
           }
           
           .dropdown-content a {
+            float: none;
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            text-align: left;
           }
           
-          .dropdown-content a:hover {background-color: #ddd;}
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
           
-          .dropdown:hover .dropdown-content {display: block;}
-          
-          .dropdown:hover .dropbtn {background-color: #3e8e41;}
-        </style>
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+
+          footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+          }
+    
+    </style>
 </head>
 <body>
-    <button onclick="document.location='https://yijingyin.github.io/CSC209/startPage.html'">Return to startPage</button>
-    <div class="dropdown">
-        <button class="dropbtn">Tutorials</button>
-        <div class="dropdown-content">
-          <a href="#">Lab1</a>
-          <a href="#">Lab2</a>
-          <a href="#">Lab3</a>
+    <header>
+        Homework 1
+    </header>
+    <div class="navbar">
+        <a href="https://yijingyin.github.io/CSC209/startPage.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Tutorials</button>
+            <div class="dropdown-content">
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/attributes.html">attributes</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/basic.html">basic</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/colors.html">colors</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/comments.html">comments</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/formatting.html">formatting</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/headings.html">headings</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/images.html">images</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/links.html">links</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/lists.html">lists</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/paragraphs.html">paragraphs</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/pictureElement.html">picture element</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/quotations.html">quotations</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/styles.html">styles</a>
+            <a href="https://yijingyin.github.io/CSC209/Hwk/Hw1/Tutorials/tables.html">tables</a>
+        
+            </div>
         </div>
-      </div>
-    
+    </div>
+
+    <footer>
+        <p>Creater: Yijing Yin</p>
+      </footer>
+
 </body>
 </html>
