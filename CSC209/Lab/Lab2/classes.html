@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style>
+.city {
+    background-color: antiquewhite;
+    color: black;
+    border: 2px soild black;
+    margin: 30px;
+    padding: 20px;
+}
+.note {
+    font-size: 120%;
+    color: red;
+  }
+  .main {
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<button onclick="myFunction()">Hide elements</button>
+<p>Click on the button to hide all cities with descriptions.</p>
+<div class="City main">
+    <h2>Paris</h2>
+    <p>Paris is a beautiful city.</p>
+</div>
+
+<div class="City">
+    <h2>london</h2>
+    <p>London <span class="note">bridge</span> is falling down.</p>
+</div>
+
+<script>
+    function myFunction() {
+      var x = document.getElementsByClassName("city");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    }
+    </script>
+
+</body>
+</html>

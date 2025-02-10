@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+</head>
+<body>
+    <h1>My First JavaScript</h1>
+
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+    
+    <p id="demo"></p>
+    <p id="paragraph"></p>
+    <script>
+        document.getElementById("paragraph").innerHTML = "Hello JavaScript!";
+    </script> 
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="secondDemo">This is a demonstration.</p>
+
+    <script>
+    function myFunction() { 
+    document.getElementById("secondDemo").innerHTML = "Hello JavaScript!";
+    document.getElementById("secondDemo").style.color="blue";
+    document.getElementById("secondDemo").style.fontSize="30px";
+    document.getElementById("secondDemo").style.backgroundColor="yellow";
+    }
+    </script>
+
+
+    <script>
+        function animal(sw) {
+          var pic;
+          if (sw == 0) {
+            pic = "dog_corgi_tricolor.png"
+          } else {
+            pic = "pet_cat_oddeye_black.png"
+          }
+          document.getElementById('dog').src = pic;
+        }
+        </script>
+    <img id="dog" src="dog_corgi_tricolor.png" alt="Corgi">
+    <p>
+        <button type="button" onclick="animal(1)">Change to Cat</button>
+        <button type="button" onclick="animal(0)">Change to Dog</button>
+    </p>
+
+    <p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = "Hello JavaScript!";
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+        
+</body>
+</html>
