@@ -36,6 +36,10 @@ nav {
     list-style-type: none;
     padding: 0;
   }
+
+  nav li {
+    margin-bottom: 1rem;
+  }
   
   /* Style the content */
   article {
