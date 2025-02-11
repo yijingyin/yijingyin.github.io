@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+    .header{
+        background-color: pink;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: large;
+        text-align: center;
+        margin:20px;
+        padding:20px;
+
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: darkseagreen;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(255, 149, 0);
+      }
+      .button-container {
+        margin: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .image-container {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+    }
+     
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Japanese Alphbet</h1>
+    </div>
+    <ul>
+        <li><a href="https://yijingyin.github.io/CSC209/Hwk/Hw2/index.html">Homework 2 Start Page</a></li>
+        <li><a href="https://yijingyin.github.io/CSC209/Hwk/Hw2/Creative/creative.html">Home</a></li>
+          <li><a href="https://yijingyin.github.io/CSC209/Hwk/Hw2/Creative/alphbet.html">Japanese Alphbet</a></li>
+          <li><a href="https://yijingyin.github.io/CSC209/Hwk/Hw2/Creative/creative.html">Phrases</a></li>
+
+
+          </li>
+        </ul>
+
+        <div class="button-container" style="text-align:center">
+            <button onclick="showHiragana()">Hiragana</button>
+            <button onclick="showKatakana()">Katakana</button>
+        </div>
+        
+        <div class="image-container" >
+            <img id="charImage" src="../Tutorials/Images/hiragana.gif" alt="Japanese characters">
+        </div>
+    
+        <script>
+            function showHiragana() {
+                document.getElementById("charImage").src = "../Tutorials/Images/hiragana.gif";
+            }
+            
+            function showKatakana() {
+                document.getElementById("charImage").src = "../Tutorials/Images/katakana.gif";
+            }
+        </script>
+</body>
+</html>
