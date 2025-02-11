@@ -76,24 +76,17 @@
 
           </li>
         </ul>
-
-        <div class="button-container" style="text-align:center">
-            <button onclick="showHiragana()">Hiragana</button>
-            <button onclick="showKatakana()">Katakana</button>
-        </div>
-        
         <div class="image-container" >
             <img id="charImage" src="../Tutorials/Images/hiragana.gif" alt="Japanese characters">
         </div>
+
+        <div class="button-container" style="text-align:center">
+            <button onclick="document.getElementById('charImage').src = '../Tutorials/Images/hiragana.gif'">Hiragana</button>
+            <button onclick="document.getElementById('charImage').src = '../Tutorials/Images/katakana.gif'">Katakana</button>
+        </div>
+        
+
     
-        <script>
-            function showHiragana() {
-                document.getElementById("charImage").src = "../Tutorials/Images/hiragana.gif";
-            }
-            
-            function showKatakana() {
-                document.getElementById("charImage").src = "../Tutorials/Images/katakana.gif";
-            }
-        </script>
+        
 </body>
 </html>
