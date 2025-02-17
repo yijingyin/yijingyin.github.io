@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Functions</h1>
+
+<p>Call a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+let result = myFunction(4, 3);
+document.getElementById("demo").innerHTML = result;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+let text = "The temperature is " + toCelsius(77) + " Celsius.";
+document.getElementById("demo2").innerHTML = text;
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+let text2 = "Outside: " + typeof carName;
+document.getElementById("demo3").innerHTML = text;
+
+function myFunction() {
+  let carName = "Volvo";
+  let text2 = "Inside: " + typeof carName + " " + carName; 
+  document.getElementById("demo4").innerHTML = text2;
+}
+
+myFunction();
+</script>
+</body>
+</html>

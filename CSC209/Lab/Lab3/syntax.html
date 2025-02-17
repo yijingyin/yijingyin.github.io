@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+<body>
+    <p>In this example, x is defined as a variable.
+        Then, x is assigned the value of 6:</p>
+        
+        <p id="demo"></p>
+        
+        <script>
+        let x;
+        x = 6;
+        document.getElementById("demo").innerHTML = x;
+        </script>
+
+        <p>JavaScript uses arithmetic operators to compute values (just like algebra).</p>
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = (5 + 6) * 10;
+</script>
+
+<p>In JavaScript the = operator is used to assign values to variables.</p>
+
+<p id="demo3"></p>
+
+<script>
+let a, b;
+a = 5;
+b = 6;
+document.getElementById("demo3").innerHTML = a + b;
+</script>
+
+<p id="demo4"></p>
+
+<script>
+var z;
+z = 5;
+document.getElementById("demo4").innerHTML = z * 10;
+</script>
+
+<p>Expressions compute to values.</p> 
+
+<p id="demo5"></p>
+
+<script>
+document.getElementById("demo5").innerHTML = "John" + " "  + "Doe";//this is a comment
+</script>
+
+<h2>JavaScript is Case Sensitive</h2>
+
+<p>Try to change lastName to lastname.</p>
+
+<p id="demo6"></p>
+
+<script>
+let lastname, lastName;
+lastName = "Doe";
+lastname = "Peterson";
+document.getElementById("demo6").innerHTML = lastName;
+/* I want to do a multiple line comment.
+    This is the second paragraph.*/
+</script>
+<p>Hyphens are not allowed in JavaScript. They are reserved for subtractions.</p>
+<pre>Underscore:
+
+    first_name, last_name, master_card, inter_city.
+    
+    Upper Camel Case (Pascal Case):
+    
+    FirstName, LastName, MasterCard, InterCity.
+    
+    
+    Lower Camel Case:
+    
+    JavaScript programmers tend to use camel case that starts with a lowercase letter:
+    
+    firstName, lastName, masterCard, interCity.</pre>
+    
+
+</body>
+</html>

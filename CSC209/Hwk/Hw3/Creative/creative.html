@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link id="theme-stylesheet" rel="stylesheet" href="winter.css">
+    
+  <script>
+    function setTheme(season) {
+      const styleSheet = document.getElementById('theme-stylesheet');
+      const image = document.getElementById('charImage');
+      
+      if (season === 'winter') {
+          styleSheet.href = 'winter.css';
+          image.src = '../Tutorials/Images/snowman.png';
+      } else if (season === 'spring') {
+          styleSheet.href = 'spring.css';
+          image.src = '../Tutorials/Images/snowman_melt.png';
+      }
+  }
+  </script>
+</head>
+<body>
+    <div class="header">
+<h1>Hwk 3 Creative</h1>
+    </div>
+    <div class="topnav">
+        <a class="active" href="../startPage.html">StartPage</a>
+        <a href="../index.html">Home</a>
+      </div>
+      
+      <div class="image-container" >
+        <img id="charImage" src="../Tutorials/Images/snowman.png" alt="Snowman" height="500px">
+    </div>
+
+    <div class="button-container">
+      <button onclick="setTheme('winter')">Winter Snowman</button>
+      <button onclick="setTheme('spring')">Spring Snowman</button>
+  </div>
+    
+
+</body>
+</html>

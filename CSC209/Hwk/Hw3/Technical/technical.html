@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Technical Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    table, th, td{
+        border:1px solid black;
+        border-collapse: collapse;
+      }
+      
+
+      * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+</style>
+<link id=pagestyle rel="stylesheet" href="pink.css">
+<script>
+  const images = [
+    "../Tutorials/Images/spring.jpg",
+    "../Tutorials/Images/summer.jpg",
+    "../Tutorials/Images/fall.jpg",
+    "../Tutorials/Images/winter.jpg"
+];
+
+const captions = [
+    "Spring",
+    "Summer",
+    "Fall",
+    "Winter"
+];
+</script>
+
+</head>
+<body>
+
+<header>
+  <h2><img src="../Tutorials/Images/flower.png" alt="flower" height="60px">Header</h2>
+  <button onclick="switchStyle()">Switch Style</button>
+  <button id="toggleBtn" onclick="toggleText()">Read Me</button>
+<p id="content" style="display: none;">There should be some content here.</p>
+
+<script>
+    let currentStyle = 1;
+    
+    function switchStyle() {
+        const styleSheet = document.getElementById("pagestyle");
+        
+        if (currentStyle === 1) {
+            styleSheet.href = "pink.css";
+            currentStyle = 2;
+        } else {
+            styleSheet.href = "yellow.css";
+            currentStyle = 1;
+        }
+    }
+</script>
+
+<script>
+  function toggleText() {
+      const content = document.getElementById("content");
+      const button = document.getElementById("toggleBtn");
+      
+      if (content.style.display === "none") {
+          content.style.display = "block";
+          button.innerHTML = "Hide Text";
+      } else {
+          content.style.display = "none";
+          button.innerHTML = "Read Me";
+      }
+  }
+</script>
+
+</header>
+
+
+<section>
+    
+  <nav>
+    <ul>
+      <li>CSC209</li>
+      <li>Web Programming</li>
+      <li>Homework 2</li>
+      <li>   
+      </li>
+      <hr>
+      <li><a href="https://yijingyin.github.io/CSC209/Hwk/Hw2/index.html">Home</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <hr>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+    </ul>
+  </nav>
+
+  
+  <article>
+    <h1>How to Draw a Tree</h1>
+    <table style="width:100%">
+        <tr>
+          <th>Step</th>
+          <th>Instruction</th>
+          <th>Hint</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Find a pen</td>
+            <td>Easy</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Find picture of tree</td>
+            <td><img src="../Tutorials/Images/tree.png" alt="tree" height="60px"></td>
+        </tr>
+      </table>
+    
+  </article>
+</section>
+
+<div class="slideshow-container" id="slideContainer">
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center" id="dotContainer"></div>
+
+<script>
+  let slideIndex = 1;
+
+// Initialize slideshow
+function initializeSlideshow() {
+    const container = document.getElementById("slideContainer");
+    const dotContainer = document.getElementById("dotContainer");
+    
+    // Create slides using for loop
+    for (let i = 0; i < images.length; i++) {
+        const slideDiv = document.createElement("div");
+        slideDiv.className = "mySlides fade";
+        
+        const numberDiv = document.createElement("div");
+        numberDiv.className = "numbertext";
+        numberDiv.textContent = `${i + 1} / ${images.length}`;
+        
+        const img = document.createElement("img");
+        img.src = images[i];
+        img.style.width = "100%";
+        
+        const textDiv = document.createElement("div");
+        textDiv.className = "text";
+        textDiv.textContent = captions[i];
+        
+        slideDiv.appendChild(numberDiv);
+        slideDiv.appendChild(img);
+        slideDiv.appendChild(textDiv);
+        
+        // Insert before navigation buttons
+        container.insertBefore(slideDiv, container.firstChild);
+        
+        // Create dots using for loop
+        const dot = document.createElement("span");
+        dot.className = "dot";
+        dot.onclick = function() { currentSlide(i + 1); };
+        dotContainer.appendChild(dot);
+    }
+    
+    showSlides(slideIndex);
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+// Initialize when page loads
+window.onload = initializeSlideshow;
+</script>
+
+
+<footer>
+  <p>Footer</p>
+  <p>Time Used for Technical section</p>
+<p>2 hours</p>
+</footer>
+
+</body>
+</html>
+

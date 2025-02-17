@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+</script>
+<p>You can also create an array, and then provide the elements:</p>
+<pre>
+    const cars = [];
+    cars[0]= "Saab";
+    cars[1]= "Volvo";
+    cars[2]= "BMW";
+</pre>
+
+<p>The following example also creates an Array, and assigns values to it:</p>
+<pre>const cars = new Array("Saab", "Volvo", "BMW");</pre>
+
+<p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+
+<p id="demo2"></p>
+
+<script>
+const bikes = ["Red", "Yellow", "Blue"];
+document.getElementById("demo2").innerHTML = bikes[0];
+</script>
+<p>You can change the value of elements in Array.</p>
+<pre>bikes[0]="Green";</pre>
+
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="demo3"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo3").innerHTML = fruits.toString();
+</script>
+<p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+<pre>
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("demo").innerHTML = cars;
+</pre>
+
+<p>Arrays use numbers to access its elements.</p>
+
+<p id="demo4"></p>
+
+<script>
+const person = ["John", "Doe", 46];
+document.getElementById("demo4").innerHTML = person[0];
+</script>
+
+<p>JavaScript uses names to access object properties.</p>
+<p id="demo5"></p>
+
+<script>
+const people = {firstName:"John", lastName:"Doe", age:46};
+document.getElementById("demo5").innerHTML = people.firstName;
+</script>
+<h1 style="font-size: large;">Array Elements Can Be Objects</h1>
+<pre>
+    JavaScript variables can be objects. Arrays are special kinds of objects.
+
+    Because of this, you can have variables of different types in the same Array.
+    
+    You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+</pre>
+
+<pre>
+    cars.length   // Returns the number of elements
+    cars.sort()   // Sorts the array
+</pre>
+
+<p>The length property returns the length of an array:</p>
+
+<p id="demo6"></p>
+
+<script>
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruit.length;
+document.getElementById("demo6").innerHTML = size;
+</script>
+
+<p>JavaScript array elements are accesses using numeric indexes (starting from 0). Accessing the last element of the array</p>
+
+<p id="demo7"></p>
+
+<script>
+const vegetables = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo7").innerHTML = vegetables[vegetables.length-1];
+</script>
+
+<h2>Looping an Array</h2>
+
+<p id="demo8"></p>
+
+<script>
+const trees = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = trees.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + trees[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo8").innerHTML = text;
+</script>
+<p>You can also use the Array.forEach() function:</p>
+<pre>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    let text = "<ul>";
+    fruits.forEach(myFunction);
+    text += "</ul>";
+    
+    function myFunction(value) {
+      text += "<li>" + value + "</li>";
+    }
+</pre>
+<h2>The push() Method</h2>
+
+<p>The push method appends a new element to an array.</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="demo9"></p>
+
+<script>
+const dogs = ["Banana", "Orange", "Apple"];
+document.getElementById("demo9").innerHTML = dogs;
+
+function myFunction2() {
+  dogs.push("Lemon");
+  document.getElementById("demo9").innerHTML = dogs;
+}
+</script>
+
+<p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="demo10"></p>
+
+<script>
+const cats = ["Banana", "Orange", "Apple"];
+document.getElementById("demo10").innerHTML = cats;
+
+function myFunction3() {
+  cats[cats.length] = "Lemon";
+  document.getElementById("demo10").innerHTML = cats;
+}
+</script>
+
+<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+
+<p id="demo11"></p>
+
+<script>
+const bird = ["Banana", "Orange", "Apple"];
+bird[6] = "Lemon";
+
+let birdLength = bird.length;
+let text7 = "";
+for (i = 0; i < birdLength; i++) {
+  text7 += bird[i] + "<br>";
+}
+
+document.getElementById("demo11").innerHTML = text7;
+</script>
+
+<p id="demo12"></p>
+
+<script>
+const human = [];
+human[0] = "John";
+human[1] = "Doe";
+human[2] = 46; 
+document.getElementById("demo12").innerHTML =
+human[0] + " " + human.length;
+</script>
+<pre>
+    WARNING !!
+    If you use named indexes, JavaScript will redefine the array to an object.
+    
+    After that, some array methods and properties will produce incorrect results.
+</pre>
+<h2>Creating an Array</h2>
+
+<p>Avoid using new Array(). Use [] instead.</p>
+
+<p id="demo13"></p>
+
+<script>
+//const points = new Array(40, 100, 1, 5, 25, 10);
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo13").innerHTML = points[0];  
+</script>
+<pre>The "typeof" operator returns object because a JavaScript array is an object.</pre>
+<pre>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():</pre>
+
+<p>The instanceof operator returns true if an object is an instance of a specified object type:</p>
+
+<p id="demo14"></p>
+
+<script> 
+// Create an Array
+const flowers = ["apples", "bananas", "oranges"];
+
+document.getElementById("demo14").innerHTML =
+"Array: " + (flowers instanceof Array);
+</script>
+
+<h2>Nested JavaScript Objects and Arrays.</h2>
+
+<p id="demo15"></p>
+
+<script>
+let x = "";
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+
+for (let i in myObj.cars) {
+  x += "<h2>" + myObj.cars[i].name + "</h2>";
+  for (let j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j] + "<br>";
+  }
+}
+
+document.getElementById("demo15").innerHTML = x;
+</script>
+</body>
+</html>
+

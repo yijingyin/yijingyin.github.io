@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Variables</h1>
+
+<p>In this example, x, y, and z are undeclared.</p>
+<p>They are automatically declared when first used.</p>
+
+<p id="demo"></p>
+
+<script>
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script>
+
+<p>In this example, a, b, and c are variables.</p>
+
+<p id="demo2"></p>
+
+<script>
+var a = 5;
+var b = 7;
+var c = a + b;
+document.getElementById("demo2").innerHTML =
+"The value of c is: " + c;
+</script>
+<h1>Note</h1>
+<pre>
+The var keyword was used in all JavaScript code from 1995 to 2015.
+
+The let and const keywords were added to JavaScript in 2015.
+
+The var keyword should only be used in code written for older browsers.
+</pre>
+
+<p>In this example, d, e, and f are variables.</p>
+
+<p id="demo3"></p>
+
+<script>
+let d = 5;
+let e = 8;
+let f = d + e;
+document.getElementById("demo3").innerHTML =
+"The value of f is: " + f;
+</script>
+
+<p>In this example, price1, price2, and total are variables.</p>
+
+<p id="demo4"></p>
+
+<script>
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+document.getElementById("demo4").innerHTML =
+"The total is: " + total;
+</script>
+<pre>
+The two variables price1 and price2 are declared with the const keyword.
+
+These are constant values and cannot be changed.
+
+The variable total is declared with the let keyword.
+
+The value total can be changed.
+</pre>
+<p>g is 1, increase it by 5.</p>
+<p id="demo5"></p>
+<script>
+    let g=1
+    g=g+5;
+    document.getElementById("demo5").innerHTML = g;
+
+</script>
+
+<p>Strings are written with quotes.</p>
+<p>Numbers are written without quotes.</p>
+
+<p id="demo6"></p>
+
+<script>
+const pi = 3.14;
+let person = "John Doe";
+let answer = 'Yes I am!';
+
+document.getElementById("demo6").innerHTML =
+pi + "<br>" + person + "<br>" + answer;
+</script>
+
+<p>Create a variable, assign a value to it, and display it:</p>
+
+<p id="demo7"></p>
+
+<script>
+let carName = "Volvo";
+document.getElementById("demo7").innerHTML = carName;
+</script>
+<p><b>You can declare many variables in one statement either in a line or multiple lines.</b></p>
+
+<p>A variable without a value has the value of:</p>
+<p id="demo8"></p>
+
+<script>
+let shopName;
+document.getElementById("demo8").innerHTML = shopName;
+</script>
+
+<p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+
+<p id="demo9"></p>
+
+<script>
+var busName = "B43";
+var busName;
+document.getElementById("demo9").innerHTML = busName;
+</script>
+<h1>Note</h1>
+<pre>
+You cannot re-declare a variable declared with let or const.
+
+This will not work:
+let carName = "Volvo";
+let carName;
+</pre>
+
+<p>The result of adding 5 + 2 + 3 is:</p>
+<p id="demo10"></p>
+
+<script>
+let p = 5 + 2 + 3;
+document.getElementById("demo10").innerHTML = p;
+</script>
+
+<p>The result of adding "John" + " " + "Doe" is:</p>
+<p id="demo11"></p>
+
+<script>
+let q = "John" + " " + "Doe";
+document.getElementById("demo11").innerHTML = q;
+</script>
+
+<p>The result of adding "5" + 2 + 3 is:</p>
+<p id="demo12"></p>
+
+<script>
+let w = "5" + 2 + 3;
+document.getElementById("demo12").innerHTML = w;
+</script>
+<h1>Note</h1>
+<pre>
+    If you put a number in quotes, the rest of the numbers will be treated as strings, 
+    and concatenated.
+</pre>
+
+<p>The result of adding 2 + 3 + "5" is:</p>
+<p id="demo13"></p>
+
+<script>
+let o = 2 + 3 + "5";
+document.getElementById("demo13").innerHTML = o;
+</script>
+
+<p>The dollar sign is treated as a letter in JavaScript names.</p>
+
+<p id="demo14"></p>
+
+<script>
+let $$$ = 2;
+let $myMoney = 5;
+document.getElementById("demo14").innerHTML = $$$ + $myMoney;
+</script>
+
+<p id="demo15"></p>
+<script>
+    let $="Hello World!";
+    let $$=3
+    document.getElementById("demo15").innerHTML = $ +$$;
+</script>
+
+<p>The underscore is treated as a letter in JavaScript names.</p>
+
+<p id="demo16"></p>
+
+<script>
+let _x = 3;
+let _100 = 5;
+
+document.getElementById("demo16").innerHTML = _x + _100;
+</script>
+</body>
+</html>
+
+
