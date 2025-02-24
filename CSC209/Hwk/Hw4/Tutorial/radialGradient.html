@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas radialGradient()</h1>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// Create gradient
+const grad=ctx.createRadialGradient(150,75,15,150,75,150);
+grad.addColorStop(0,"lightblue");
+grad.addColorStop(0.3,"pink");
+grad.addColorStop(0.5,"green");
+grad.addColorStop(1,"darkblue");  
+
+// Fill rectangle with gradient
+ctx.fillStyle = grad;
+ctx.fillRect(10,10,280,130);
+</script>
+
+</body>
+</html>
