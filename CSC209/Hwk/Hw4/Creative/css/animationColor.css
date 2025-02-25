@@ -1,0 +1,40 @@
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: yellow;
+  background-image: linear-gradient(to bottom right, purple, yellow);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#circle1 {
+  top: 0;
+  left: 0;
+  background-color: red;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#circle2 {
+  bottom: 0;
+  right: 0;
+  background-color: blue;
+}
+
+#circle3 {
+  top: 0;
+  right: 0;
+  background-color: green;
+}
+
+#circle4 {
+  bottom: 0;
+  left: 0;
+  background-color: purple;
+}
+

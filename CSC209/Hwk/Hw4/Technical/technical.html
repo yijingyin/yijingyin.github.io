@@ -1,87 +1,28 @@
 <!DOCTYPE html>
 <html>
-<style>
-#container {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: yellow;
-}
-#redBlock {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
-}
-
-#blueBlock {
-  width: 50px;
-  height: 50px;
-  bottom: 0px;
-  right: 0px;
-  position:absolute;
-  background-color: blue;
-}
-</style>
+<head>
+  <link rel="stylesheet" href="css/animationColor.css">
+  <script src="JS/animation.js"></script>
+</head>
 <body>
-
-  <label for="redSpeed">Red square speed</label>
-  <select id="redSpeed">
-      <option value=50>Slow</option>
-      <option value=20>Medium</option>
-      <option value=10>Fast</option>
+  <h2>Technical</h2>
+  <p>Technical part: 3 hours</p>
+  
+  <label for="speed">Animation speed</label>
+  <select id="speed">
+    <option value="50">Slow</option>
+    <option value="20">Medium</option>
+    <option value="10">Fast</option>
   </select>
-  <button id="moveRedBtn" onclick="moveRed()">Move red square</button> <br><br>  
-
-  <label for="blueSpeed">Blue square speed</label>
-  <select id="blueSpeed">
-      <option value=100>Slow</option>
-      <option value=20>Medium</option>
-      <option value=10>Fast</option>
-  </select>
-  <button id="moveBlueBtn" onclick="moveBlue()">Move blue square</button> <br><br> 
-
-
-<div id ="container">
-  <div id ="redBlock"></div>
-  <div id ="blueBlock"></div>
-</div>
-
-<script>
-function moveRed() {
-  var redSquare = document.getElementById("redBlock");   
-  var redPos = 0;
-  var stepRedId = setInterval(stepRed, 10);
-
-  function stepRed() {
-      if (redPos == 350) {
-          clearInterval(stepRedId);
-      } else {
-          redPos++; 
-          redSquare.style.top = redPos + 'px'; 
-          redSquare.style.left = redPos + 'px';
-      }
-  }
-}
-</script>
-
-<script>
-  function moveBlue() {
-    var blueSquare = document.getElementById("blueBlock");   
-    var bluePos = 0;
-    var stepBlueId = setInterval(stepBlue, 20);
-
-    function stepBlue() {
-        if (bluePos == 350) {
-            clearInterval(stepRedId);
-        } else {
-            bluePos++; 
-            blueSquare.style.bottom = bluePos + 'px'; 
-            blueSquare.style.right = bluePos + 'px';
-        }
-    }
-  }
-  </script>
-
+  
+  <button id="moveAllBtn" onclick="moveAllSquares()">Start All Animations</button>
+  <br><br>
+  
+  <div id="container">
+    <div id="square1" class="square"></div>
+    <div id="square2" class="square"></div>
+    <div id="square3" class="square"></div>
+    <div id="square4" class="square"></div>
+  </div>
 </body>
 </html>
