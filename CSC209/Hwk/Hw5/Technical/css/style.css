@@ -1,0 +1,17 @@
+
+
+.controls {
+    margin-bottom: 10px;
+}
+canvas {
+    display: block;
+    margin-top: 10px;
+}
+button {
+    padding: 5px 10px;
+}
+label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}

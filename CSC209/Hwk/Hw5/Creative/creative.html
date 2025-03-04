@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/animation.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Vector Animation</h1>
+    <p>Creative: 2 hours</p>
+    
+    <div class="controls">
+        <label for="nrpts">Number of Points:</label>
+        <input type="number" id="nrpts" value="5" min="1" onchange="updateNRPTS()">
+        <label for="speed">Animation speed:</label>
+        <select id="speed">
+            <option value="50">Slow</option>
+            <option value="20" selected>Medium</option>
+            <option value="10">Fast</option>
+        </select>
+        <button onclick="generatePoints()">Generate Points</button>
+    </div>
+    
+    <canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;"></canvas>
+</body>
+</html>
