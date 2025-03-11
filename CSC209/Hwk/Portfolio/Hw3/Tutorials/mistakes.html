@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Common JavaScript Mistakes</h2>
+
+<p>In regular comparison, data type does not matter. This if statement returns true:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 10;xa
+let y = "10";
+document.getElementById("demo").innerHTML = Boolean(x == y);
+</script>
+
+<h2>Common JavaScript Mistakes</h2>
+
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p>This will work:</p>
+
+<p id="demo2"></p>
+
+<script>
+let a = 10;
+switch(a) {
+  case 10: document.getElementById("demo2").innerHTML = "Hello";
+}
+</script>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = myFunction(55);
+function myFunction(a) {
+  let
+  power = 10;
+  return
+  a * power;
+}
+</script>
+
+<p>If you use a named index when accessing an array, JavaScript will redefine the array to a standard object, and some array methods and properties will produce undefined or incorrect results.</p>
+
+<p id="demo4"></p>
+
+<script>
+const person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46; 
+document.getElementById("demo4").innerHTML =
+person[0] + " " + person.length;
+</script>
+
+</body>
+</html>

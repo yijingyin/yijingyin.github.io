@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+<p id="demo"></p>
+
+<script>
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+</script>
+<p>With back-ticks, you can use both single and double quotes inside a string:</p>
+
+<p id="demo2"></p>
+
+<p>Templates not supported in Internet Explorer.</p>
+
+<script>
+let text2 = `He's often called "Johnny"`;
+document.getElementById("demo2").innerHTML = text2;
+</script>
+<p>The length of the string is:</p>
+<p id="demo3"></p>
+
+<script>
+let text3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo3").innerHTML = text3.length;
+</script>
+<p>The escape sequence \" inserts a double quote in a string.</p>
+
+<p id="demo4"></p>
+
+<script>
+let text4 = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo4").innerHTML = text4; 
+</script>
+<p>The escape sequence \' inserts a single quote in a string.</p>
+
+<p id="demo5"></p>
+
+<script>
+let text5 = 'It\'s alright.';
+document.getElementById("demo5").innerHTML = text5; 
+</script>
+
+<p>The escape sequence \\ inserts a backslash in a string.</p>
+
+<p id="demo6"></p>
+
+<script>
+let text6 = "The character \\ is called backslash.";
+document.getElementById("demo6").innerHTML = text6; 
+</script>
+
+<p id="demo6"></p>
+
+<script>
+// x is a string
+let x = "John";
+
+// y is an object
+let y = new String("John");
+
+document.getElementById("demo6").innerHTML =
+typeof x + "<br>" + typeof y;
+</script>
+
+<h2>Never Create Strings as Objects</h2>
+<p>Strings and objects cannot be safely compared.</p>
+
+<p>When using the == operator, x and y are equal:</p>
+<p id="demo7"></p>
+
+<script>
+let a = "John";        // a is a string
+let b = new String("John");  // b is an object
+document.getElementById("demo7").innerHTML = (a==b);
+</script>
+
+<p>When using the === operator, x and y are not equal:</p>
+<p id="demo8"></p>
+
+<script>
+let c = "John";        // c is a string
+let d = new String("John");  // d is an object
+document.getElementById("demo8").innerHTML = (c===d);
+</script>
+<h1>Comparing two JavaScript objects always returns false. No matter it is "==" or "===".</h1>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+
+<script>
+let x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+
+document.getElementById("demo").innerHTML =
+"The value of z is " + z + ".";  
+</script>
+
+<p id="demo1"></p>
+
+<script>
+let a, b, c;
+a = 5;
+b = 7;
+c = a + b;//line 21,22,23 can also be on the same line.
+document.getElementById("demo1").innerHTML = c;
+</script>
+
+<p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo2").innerHTML = "Hello Dolly!";
+  document.getElementById("demo3").innerHTML = "How are you?";
+}
+</script>
+</body>
+</html>

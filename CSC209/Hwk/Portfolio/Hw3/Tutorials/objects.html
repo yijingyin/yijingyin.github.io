@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Variables</h1>
+<h2>Creating a Variable</h2>
+<p id="demo"></p>
+
+<script>
+// Create and a Variable:
+let car = "Fiat";
+document.getElementById("demo").innerHTML = "Car: " +  car;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+// Create an Object
+const person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+
+// Diplay Object Content
+document.getElementById("demo2").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+<p>There are two ways to access a property: object.property or object["property"]</p>
+
+<p id="demo3"></p>
+
+<script>
+// Create an Object:
+const people = {
+  firstName2: "John",
+  lastName2 : "Doe",
+  id     :  5566
+};
+
+// Display lastName from the Object:
+document.getElementById("demo3").innerHTML =
+"The last name is " + people.lastName2;
+</script>
+
+<h2>The onclick Attribute</h2>
+
+<button onclick="document.getElementById('demo4').innerHTML=Date()">The time is?</button>
+
+<p id="demo4"></p>
+
+<h2>The onclick Attribute</h2>
+
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo5").innerHTML = Date();
+}
+</script>
+
+<p id="demo5"></p>
+</body>
+</html>

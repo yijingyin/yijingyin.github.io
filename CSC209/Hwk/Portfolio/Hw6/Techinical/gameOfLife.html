@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game of Life</title>
+    <script>
+        // Game settings
+        const cellSize = 10;
+        let cells = [];
+        let isRunning = false;
+        let animationId = null;
+        let canvasWidth = 500;  // Default width
+        let canvasHeight = 300; // Default height
+    </script>
+    <script src="js/gameOfLife.js"></script>
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <p>Both Creative and Techinical parts</p>
+    <p>Technical: 4.5 hours</p>
+    <p>Creative: 3 hours</p>
+    
+    <div>
+        <label for="canvasSize">Canvas Size: </label>
+        <select id="canvasSize">
+            <option value="small">Small (300x200)</option>
+            <option value="medium" selected>Medium (500x300)</option>
+            <option value="large">Large (700x400)</option>
+            <option value="xlarge">Extra Large (900x500)</option>
+        </select>
+        <button id="applySizeButton">Apply Size</button>
+    </div>
+    <br>
+    
+    <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+    <br><br>
+    
+    <button id="startButton">Start</button>
+    <button id="nextButton">Next</button>
+    <button id="restartButton">Restart</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas textBaseline</h1>
+
+<canvas id="myCanvas" width="500" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+// Create a line
+ctx.strokeStyle = "red";
+ctx.lineWidth  = 2;
+ctx.beginPath();
+ctx.moveTo(0,75);
+ctx.lineTo(500,75);
+ctx.stroke();
+ctx.closePath();
+
+ctx.font = "20px Arial";
+ctx.fillStyle = "purple";
+
+ctx.textBaseline = "top";
+ctx.fillText("top", 5, 75);
+
+ctx.textBaseline = "hanging";
+ctx.fillText("hanging", 40, 75);
+
+ctx.textBaseline = "middle";
+ctx.fillText("middle", 120, 75);
+
+ctx.textBaseline = "alphabetic";
+ctx.fillText("alphabetic", 190, 75);
+
+ctx.textBaseline = "ideographic";
+ctx.fillText("ideographic", 295, 75);
+
+ctx.textBaseline = "bottom";
+ctx.fillText("bottom", 410, 75);
+
+ctx.textBaseline = "more";
+ctx.fillText("more", 450, 60);
+</script>
+
+</body>
+</html>
