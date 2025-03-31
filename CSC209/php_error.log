@@ -1,0 +1,4 @@
+[26-Mar-2025 17:52:24 UTC] PHP Parse error:  syntax error, unexpected token "echo" in /Applications/MAMP/htdocs/yijingyin.github.io/CSC209/Lab/Lab7/Buggy/example1buggy.html.php on line 6
+[26-Mar-2025 17:52:32 UTC] PHP Warning:  Undefined array key 12 in /Applications/MAMP/htdocs/yijingyin.github.io/CSC209/Lab/Lab7/Buggy/example1buggy.html.php on line 30
+[26-Mar-2025 17:57:53 UTC] PHP Parse error:  syntax error, unexpected token "-", expecting "]" in /Applications/MAMP/htdocs/yijingyin.github.io/CSC209/Lab/Lab7/Buggy/example1buggy.html.php on line 30
+[26-Mar-2025 17:58:06 UTC] PHP Warning:  Undefined array key 12 in /Applications/MAMP/htdocs/yijingyin.github.io/CSC209/Lab/Lab7/Buggy/example1buggy.html.php on line 30

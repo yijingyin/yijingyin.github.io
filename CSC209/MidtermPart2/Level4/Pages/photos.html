@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Technical Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="../js/photos.js"></script>
+<link id=pagestyle rel="stylesheet" href="../css/photopink.css">
+<link id=pagestyle rel="stylesheet" href="../css/photos.css">
+</head>
+<body>
+
+<header>
+  <h2>Header</h2>
+  <button id="toggleBtn" onclick="toggleText()">Read Me</button>
+<p id="content" style="display: none;">There should be some content here.</p>
+
+
+</header>
+
+
+<section>
+    
+  <nav>
+    <ul>
+      <li>CSC209</li>
+      <li>Web Programming</li>
+      <li>Homework 2</li>
+      <li>   
+      </li>
+      <hr>
+      <li><a href="CSC209/Hwk/Hw2/index.html">Home</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <hr>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+    </ul>
+  </nav>
+
+  
+  <article>
+    <h1>How to Draw a Tree</h1>
+    <table style="width:100%">
+        <tr>
+          <th>Step</th>
+          <th>Instruction</th>
+          <th>Hint</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Find a pen</td>
+            <td>Easy</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Find picture of tree</td>
+            <td>Pretend here has an image of a tree</td>
+        </tr>
+      </table>
+    
+  </article>
+</section>
+
+<div class="slideshow-container" id="slideContainer">
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center" id="dotContainer"></div>
+
+<script>
+ 
+
+initializeSlideshow();
+</script>
+
+
+<footer>
+  <p>Footer</p>
+
+</footer>
+
+</body>
+</html>
+

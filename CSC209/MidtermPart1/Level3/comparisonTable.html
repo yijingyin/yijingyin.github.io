@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/comparisonTable.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+<h2>Comparison Table</h2>
+<p>The link tag in the head uses the comparisonTable.css file from css folder. 
+  It changes the style of the html. 
+  The "style" part in "head" use the css file to change the check and remove marks in the table.</p>
+<table id="comparisonTable">
+  <tr>
+    <th style="width:50%">Name</th>
+    <th>Part 1</th>
+    <th>Part 2</th>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+
+</table>
+<script>
+var ROW = "<tr><td>Sample text</td><td>CHECKCROSSBASIC</td><td>CHECKCROSSPRO</td></tr>";
+var ROW2 = "<tr><td>Sample text</td><td><i class=\"fa fa-remove\"></i></td><td><i class=\"fa fa-check\"></i></td></tr>";
+//alert(ROW);
+//alert(ROW2);
+document.getElementById("comparisonTable").innerHTML += ROW2;
+
+</script>
+</body>
+</html>
